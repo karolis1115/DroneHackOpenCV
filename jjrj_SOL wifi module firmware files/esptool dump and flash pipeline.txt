@@ -1,0 +1,9 @@
+#Context
+me being broke I sacrified an esp12-f module by replacing the Flash IC with the one JJRC_SOL wifi camera module had
+
+*DUMP* (full dump)
+python esptool.py --port COM10 --baud 115200 read_flash 0x00000 0x1000000 dump.bin
+
+*FLASH*(full flash)
+python esptool.py --port COM10 write_flash -fm dio 0x00000 backup.img
+

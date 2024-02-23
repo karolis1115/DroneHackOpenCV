@@ -1,0 +1,40 @@
+ROM:    Ok.
+RamBoot: Start
+Loading U-Boot Image OK.
+Starting U-Boot ......
+
+
+U-Boot 2010.06 (Mar 15 2017 - 17:33:57)
+
+DRAM:  16 MiB
+SF: Got idcode 5e 40 15 5e 40
+In:    serial
+Out:   serial
+Err:   serial
+MMC:   FH_MMC: 0
+MMC FLASH INIT: No card on slot!
+Net:   ENC28J60-MAC
+Card did not respond to voltage select!
+** Can't read from device 0 **
+
+** Unable to use for fatload **
+Hit any key to stop autoboot:  0
+SF: Got idcode 5e 40 15 5e 40
+2048 KiB W25Q16 at 0:0 is now current device
+## Starting application at 0xA0000000 ...
+
+U-Boot # printenv
+bootargs=
+bootcmd=sf probe 0; sf read 0xA0000000 0x90000 0x160000; go A0000000
+bootdelay=1
+baudrate=115200
+ethaddr=10:20:30:40:50:60
+ipaddr=10.81.81.81
+serverip=10.81.0.1
+phymode=MII
+ethact=ENC28J60-MAC
+stdin=serial
+stdout=serial
+stderr=serial
+
+Environment size: 244/65532 bytes

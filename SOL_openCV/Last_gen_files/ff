@@ -1,0 +1,58 @@
+ff 08 7e 3f 40 3f 90 10 10 00 0b -ALT_HOLD
+                           -
+ff 08 7e 3f 40 3f 90 10 10 40 cb -ARM
+                           -
+ff 08 7e 3f 40 3f 90 10 10 80 8b -LAND
+                            -
+ff 08 7e 3f 40 3f 90 10 10 a0 6b -EMERGENCY_STOP
+                  -         -
+ff 08 7e 3f 40 3f a0 10 10 00 fb - dont remember just for comaring purposes :P
+
+
+
+
+	if (GetAsyncKeyState(0x57)) send(ConnectSocket, (char*)hexstr_to_char(UP), (int)strlen(UP), 0);
+		if (GetAsyncKeyState(0x53)) send(ConnectSocket, (char*)hexstr_to_char(DOWN), (int)strlen(DOWN), 0);
+
+
+eleventh byte --- err check? * *
+tenth byte --- mode **
+ninth byte --- ?
+eighth byte --- ?
+seventh byte --- ? **
+sixth byte --- roll *
+fifth byte --- pitch *
+fourth byte --- yaw *
+third byte --- throttle *
+second byte --- ? 
+first byte --- header
+
+7e 3f 40 3f 90 10 10 00
+
+01 EC
+
+08 7e 3f 40 3f 90 10 10 40
+
+02 34
+
+cb
+
+
+
+08 7e 3f 40 3f 90 10 10 a0 
+
+6b
+
+02 94
+
+to calculate checksum(last byte)
+1. (in hex) add all the bytes up except the FF and obviously the checksum
+2. only take the last 2 bytes ignore the first 2
+3. subtract what you have from FF 
+
+example: 08+7e+3f+40+3f+90+10+10+a0 
+	you get: 02 94
+	ignore 02
+	FF-94 = 6b
+	6b is the checksum
+

@@ -1,0 +1,51 @@
+exec             -- exec module from a file
+list_memlist     -- list module free memory information
+list_mempage     -- list module using memory page information
+list_mem         -- list memory usage information
+mkfs             -- make a file system
+df               -- get disk free
+mount            -- mount a file system
+unmount          -- unmount a file system
+ls               -- list directory contents
+rm               -- remove files or directories
+cat              -- print file
+copy             -- copy file or dir
+mkdir            -- create a directory
+hello            -- say hello world
+version          -- show RT-Thread version information
+list_thread      -- list thread
+list_sem         -- list semaphone in system
+list_event       -- list event in system
+list_mutex       -- list mutex in system
+list_mailbox     -- list mail box in system
+list_msgqueue    -- list message queue in system
+list_memheap     -- list memory heap in system
+list_mempool     -- list memory pool in system
+list_timer       -- list timer in system
+list_device      -- list device in system
+list_module      -- list module in system
+list_mod_detail  -- list module objects in system
+list             -- list all symbol in system
+set_if           -- set network interface address
+list_if          -- list network interface information
+list_tcps        -- list all of tcp connections
+list_irq         -- list system irq
+i2c_test_sensor  -- sensor i2c test
+wdt_start        -- enable wdt
+isp_read_proc    -- read proc info
+media_mem_proc   -- media mem use info.e.g : media_mem_proc()
+jpeg_write_proc  -- write jpeg proc info
+jpeg_read_proc   -- read jpeg proc info
+media_read_proc  -- get media process proc info
+enc_write_proc   -- write enc proc info
+enc_read_proc    -- read enc proc info
+vou_write_proc   -- write vou proc info
+vou_read_proc    -- read vou proc info
+vpu_write_proc   -- write vpu proc info
+vpu_read_proc    -- read vpu proc info
+cmm_mem_proc     -- reserved mem use info.e.g : cmm_mem_proc(index)
+sadc_demo_main   -- sadc_demo_main()
+iperf            -- iperf("serverip", port)
+ping             -- ping network host
+telnet_srv       -- startup telnet server
+reset            -- system reset

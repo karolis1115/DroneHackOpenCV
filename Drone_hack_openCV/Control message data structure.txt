@@ -1,0 +1,34 @@
+ff 08 7e 3f 40 3f 90 10 10 00 0b -ALT_HOLD
+                           -
+ff 08 7e 3f 40 3f 90 10 10 40 cb -ARM
+                           -
+ff 08 7e 3f 40 3f 90 10 10 80 8b -LAND
+                            -
+ff 08 7e 3f 40 3f 90 10 10 a0 6b -EMERGENCY_STOP
+                  -         -
+
+
+ff 08 7e 3f 40 3f a0 10 10 00 fb - dont remember just for comaring purposes :P
+
+
+
+
+	if (GetAsyncKeyState(0x57)) send(ConnectSocket, (char*)hexstr_to_char(UP), (int)strlen(UP), 0);
+		if (GetAsyncKeyState(0x53)) send(ConnectSocket, (char*)hexstr_to_char(DOWN), (int)strlen(DOWN), 0);
+
+
+eleventh byte --- err check? * *
+tenth byte --- mode **
+ninth byte --- ?
+eighth byte --- ?
+seventh byte --- ? **
+sixth byte --- roll *
+fifth byte --- pitch *
+fourth byte --- yaw *
+third byte --- throttle *
+second byte --- ? 
+first byte --- header
+
+
+
+
